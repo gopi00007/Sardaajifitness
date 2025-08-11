@@ -1,0 +1,240 @@
+/* Global styles for the SardaarJi Fitness trust‑first intake app */
+* { box-sizing: border-box; }
+html, body {
+  margin: 0;
+  padding: 0;
+  font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+  background: #0b0d12;
+  color: #e8ecf1;
+}
+.app {
+  max-width: 900px;
+  margin: 32px auto;
+  padding: 0 16px;
+}
+.header h1 {
+  margin: 0 0 8px 0;
+  font-size: 28px;
+  font-weight: 700;
+  /* Display logo and text inline */
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+/* Logo styling */
+.logo {
+  height: 36px;
+  width: 36px;
+  object-fit: contain;
+}
+.subtitle {
+  margin: 6px 0 16px 0;
+  color: #9aa7b3;
+}
+.card {
+  /* Lighten card background for catchier feel */
+  background: #1e2633;
+  border: 1px solid #2a3748;
+  border-radius: 16px;
+  padding: 20px;
+}
+.progress-wrap {
+  height: 8px;
+  background: #11151b;
+  border: 1px solid #1b222c;
+  border-radius: 999px;
+  overflow: hidden;
+  margin: 6px 0 10px 0;
+}
+.progress {
+  height: 100%;
+  width: 0;
+  /* Switch progress bar color to a vibrant blue */
+  background: #3b82f6;
+  transition: width .3s ease;
+}
+#progressText {
+  font-weight: 600;
+  color: #b5c3d0;
+}
+.step-title {
+  margin: 4px 0 6px 0;
+  font-size: 22px;
+}
+.step-desc {
+  margin: 0 0 16px 0;
+  color: #a9b4bf;
+}
+.field {
+  margin-bottom: 16px;
+}
+.label-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+}
+.label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: 600;
+}
+.why-tag {
+  font-size: 12px;
+  color: #9fb0bf;
+  border: 1px solid #2a3442;
+  border-radius: 999px;
+  padding: 6px 10px;
+}
+.control input,
+.control select,
+.control textarea {
+  width: 100%;
+  padding: 12px 14px;
+  border-radius: 12px;
+  /* Slightly lighter background and border for inputs to feel friendlier */
+  background: #162136;
+  border: 1px solid #2a3748;
+  color: #e8ecf1;
+  outline: none;
+}
+.control input[type=range] {
+  padding: 0;
+}
+.inline {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+}
+.inline > * {
+  flex: 1;
+}
+.hint {
+  margin: 8px 0 0 0;
+  color: #95a2ae;
+  font-size: 13px;
+}
+.error {
+  color: #ff6b6b;
+  font-size: 13px;
+  margin: 6px 0 0 0;
+}
+.footer {
+  display: flex;
+  gap: 10px;
+  justify-content: flex-end;
+  margin-top: 16px;
+}
+.btn {
+  cursor: pointer;
+  border: none;
+  border-radius: 12px;
+  padding: 12px 16px;
+  font-weight: 600;
+  text-decoration: none;
+  text-align: center;
+}
+.btn-primary {
+  background: #3b82f6;
+  color: #0f172a;
+}
+.btn-secondary {
+  background: #334155;
+  color: #cbd5e1;
+  border: 1px solid #475569;
+}
+.btn-ghost {
+  background: transparent;
+  color: #6b7280;
+  border: 1px dashed #475569;
+}
+.btn:disabled {
+  opacity: .5;
+  cursor: not-allowed;
+}
+.radio-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+.pill {
+  padding: 10px 14px;
+  border: 1px solid #2a3442;
+  border-radius: 999px;
+  cursor: pointer;
+  user-select: none;
+}
+.pill input {
+  display: none;
+}
+.pill.active {
+  background: #182033;
+  border-color: #3a4a62;
+}
+.row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+}
+@media (max-width: 720px) {
+  .row {
+    grid-template-columns: 1fr;
+  }
+}
+.review {
+  background: #0c1117;
+  border: 1px solid #1b222c;
+  border-radius: 12px;
+  padding: 16px;
+  max-height: 50vh;
+  overflow: auto;
+}
+.review dl {
+  display: grid;
+  grid-template-columns: 220px 1fr;
+  gap: 8px;
+  margin: 0;
+}
+.review dt {
+  color: #8e9aa6;
+}
+.review dd {
+  margin: 0;
+}
+.export-actions {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin-top: 12px;
+}
+.toast {
+  position: fixed;
+  bottom: 18px;
+  right: 18px;
+  background: #121926;
+  color: #e8ecf1;
+  border: 1px solid #2a3442;
+  border-radius: 10px;
+  padding: 10px 12px;
+  opacity: 0;
+  transform: translateY(8px);
+  transition: all .25s;
+}
+.toast.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+.small {
+  font-size: 13px;
+  color: #a1adbb;
+  margin-top: 4px;
+}
+.small-btn {
+  padding: 6px 10px;
+  font-size: 12px;
+  border-style: dashed;
+}
+.next-steps {
+  margin: 0 0 14px 16px;
+}
