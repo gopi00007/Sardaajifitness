@@ -8,8 +8,11 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css" />
+  <meta name="theme-color" content="#2563eb" />
 </head>
 <body>
+  <noscript>Please enable JavaScript to use this intake form.</noscript>
+
   <div class="app">
     <header class="header">
       <!-- Logo and brand name side by side -->
@@ -75,6 +78,7 @@
     </section>
   </template>
 
-  <script src="script.js"></script>
+  <!-- IMPORTANT: load as a module so camera + Supabase imports work -->
+  <script type="module" src="script.js"></script>
 </body>
 </html>
