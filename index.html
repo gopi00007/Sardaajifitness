@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <!-- Correct brand spelling with double 'a' and lowercase 'ji' -->
+  <title>Sardaarji Fitness — Quick Intake</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="app">
+    <header class="header">
+      <!-- Logo and brand name side by side -->
+      <h1>
+        <img src="logo.png" alt="Sardaarji Fitness logo" class="logo" />
+        Sardaarji Fitness
+      </h1>
+      <div class="progress-wrap" aria-label="progress"><div id="progressBar" class="progress"></div></div>
+      <p class="subtitle"><span id="progressText">0%</span> done • ~2–3 min • Your data stays on this device</p>
+    </header>
+
+    <main id="formRoot" class="card"></main>
+
+    <footer class="footer">
+      <button id="btnBack" class="btn btn-secondary" disabled>Back</button>
+      <button id="btnNext" class="btn btn-primary">Next</button>
+      <button id="btnSave" class="btn btn-ghost">Save</button>
+    </footer>
+  </div>
+
+  <!-- Step Template -->
+  <template id="tplStep">
+    <section class="step">
+      <h2 class="step-title"></h2>
+      <p class="step-desc"></p>
+      <div class="fields"></div>
+      <p class="small why" hidden></p>
+    </section>
+  </template>
+
+  <!-- Field Template -->
+  <template id="tplField">
+    <div class="field">
+      <div class="label-row">
+        <label class="label"></label>
+        <span class="why-tag" hidden></span>
+      </div>
+      <div class="control"></div>
+      <p class="hint"></p>
+      <p class="error" hidden></p>
+      <button class="skip btn btn-ghost small-btn" type="button" hidden>Skip for now</button>
+    </div>
+  </template>
+
+  <!-- Review Template -->
+  <template id="tplReview">
+    <section class="step">
+      <h2 class="step-title">You’re all set ✅</h2>
+      <p class="step-desc">Thanks! Here’s what happens next.</p>
+      <ul class="next-steps">
+        <li>We’ll use your answers to craft your starter meal plan (veg-friendly options included).</li>
+        <li>You’ll get your plan via WhatsApp or email (your choice).</li>
+        <li>We’ll adjust weekly based on progress and feedback.</li>
+      </ul>
+      <div id="reviewContainer" class="review"></div>
+      <div class="export-actions">
+        <button id="btnCopy" class="btn btn-secondary">Copy JSON</button>
+        <button id="btnDownload" class="btn btn-primary">Download JSON</button>
+        <a id="btnWhatsApp" class="btn btn-secondary" target="_blank" rel="noopener">Share via WhatsApp</a>
+        <button id="btnReset" class="btn btn-ghost">Start Over</button>
+      </div>
+      <p class="small">Tip: You can also send this to us by WhatsApp now and we’ll confirm receipt.</p>
+    </section>
+  </template>
+
+  <script src="script.js"></script>
+</body>
+</html>
